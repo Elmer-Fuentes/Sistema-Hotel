@@ -23,8 +23,10 @@ namespace Prestantación
         private void frm_hotel_Load(object sender, EventArgs e)
         {
             fechas();
-            TipoHabitacion();
             MtdPrecioTotalDias();
+            MtdTotalFacturar();
+            TipoHabitacion();
+            CostoTipoHabitacion();
         }
         public void fechas ()
         {
@@ -41,19 +43,30 @@ namespace Prestantación
         public void CostoTipoHabitacion()
         {
             int posicion = cbx_tipo_habitacion.SelectedIndex;
-            lbl_costoTipo_habitacion.Text = c_logica.MtdPrecioPorDia(posicion).ToString();
-
+            if (cbx_tipo_habitacion != null)
+            {
+                lbl_costoTipo_habitacion.Text = c_logica.MtdCostoTipoHabitación(posicion).ToString();
+            }
+            else
+            {
+                cbx_tipo_habitacion.Text = "0";
+            }
         }
 
         private void cbx_tipo_habitacion_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            CostoTipoHabitacion();
+        {   
+            
+                CostoTipoHabitacion();
+                MtdTotalFacturar();
+            
+            
         }
 
         private void txt_estado_SelectedIndexChanged(object sender, EventArgs e)
         {
             TipoHabitacion();
             MtdPrecioTotalDias();
+            MtdTotalFacturar();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -61,6 +74,7 @@ namespace Prestantación
             MessageBox.Show("Cerrando aplicación", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             Close();
         }
+
 
         public void MtdPrecioTotalDias()
         {
@@ -82,6 +96,35 @@ namespace Prestantación
         private void txt_dias_TextChanged(object sender, EventArgs e)
         {
             MtdPrecioTotalDias();
+            MtdTotalFacturar();
+            TipoHabitacion();
+            MtdPrecioTotalDias();
+            CostoTipoHabitacion();
+
+
         }
+
+        public void MtdTotalFacturar()
+        {
+            double precioTotalDias, costoTipoHabitacion;
+
+            // convertir ambos valores de los labels
+            bool esPrecioValido = double.TryParse(lbl_precio_total_dias.Text, out precioTotalDias);
+            bool esCostoValido = double.TryParse(lbl_costoTipo_habitacion.Text, out costoTipoHabitacion);
+
+            // Si ambos valores son válidos, procedemos
+            if (esPrecioValido && esCostoValido)
+            {
+                double resultado = c_logica.MtdTotalFacturar(precioTotalDias, costoTipoHabitacion);
+                lbl_total_factura.Text = resultado.ToString();
+            }
+            else
+            {
+                // Si alguno es inválido, mostramos 0
+                lbl_total_factura.Text = "0";
+            }
+        }
+
+
     }
 }

@@ -47,6 +47,7 @@ namespace Logica
         
         }
 
+        
 
         public static int MtdCostoTipoHabitación(int posicion)
         {
@@ -74,7 +75,10 @@ namespace Logica
             }
             return precio;
         }
-     
+        public static double MtdTotalFacturar(double costodias, double costotipohabitacion)
+        {
+        return costodias + costotipohabitacion;
+        }
 
 
     }
