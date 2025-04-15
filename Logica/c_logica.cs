@@ -41,6 +41,13 @@ namespace Logica
             return precio;
         }
 
+        public static double MtdPrecioTotalDias(double dias, double precio)
+        {
+            return dias * precio;
+        
+        }
+
+
     }
 
 }

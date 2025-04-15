@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 using Logica;
 
 namespace Prestantación
@@ -23,6 +24,7 @@ namespace Prestantación
         {
             fechas();
             TipoHabitacion();
+            MtdPrecioTotalDias();
         }
         public void fechas ()
         {
@@ -45,12 +47,35 @@ namespace Prestantación
         private void txt_estado_SelectedIndexChanged(object sender, EventArgs e)
         {
             TipoHabitacion();
+            MtdPrecioTotalDias();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Cerrando aplicación", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             Close();
+        }
+
+        public void MtdPrecioTotalDias()
+        {
+            int posicion = cbx_size_habitac.SelectedIndex;
+            double precio = c_logica.MtdPrecioPorDia(posicion);
+            // Validación correcta del texto ingresado
+            if (string.IsNullOrWhiteSpace(txt_dias.Text))
+            {
+                txt_dias.Text = ""; // Si está vacío o contiene solo espacios
+            }
+            else
+            {
+                double diashospedaje = double.Parse(txt_dias.Text);
+                lbl_precio_total_dias.Text = c_logica.MtdPrecioTotalDias(diashospedaje, precio).ToString();
+
+            }
+        }
+
+        private void txt_dias_TextChanged(object sender, EventArgs e)
+        {
+            MtdPrecioTotalDias();
         }
     }
 }
