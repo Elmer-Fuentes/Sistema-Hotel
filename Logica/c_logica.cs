@@ -48,6 +48,35 @@ namespace Logica
         }
 
 
+        public static int MtdCostoTipoHabitación(int posicion)
+        {
+            int precio = 0;
+            switch (posicion)
+            {
+                case 0:
+                    precio = 200;
+                    break;
+
+                case 1:
+                    precio = 500;
+                    break;
+
+                case 2:
+                    precio = 1000;
+                    break;
+
+                case 3:
+                    precio = 2000;
+                    break;
+                default:
+                    precio = 0;
+                    break;
+            }
+            return precio;
+        }
+     
+
+
     }
 
 }

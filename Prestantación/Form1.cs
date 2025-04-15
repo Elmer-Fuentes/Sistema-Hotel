@@ -38,10 +38,16 @@ namespace Prestantación
             lbl_precio_dia.Text = c_logica.MtdPrecioPorDia(posicion).ToString();
   
         }
+        public void CostoTipoHabitacion()
+        {
+            int posicion = cbx_tipo_habitacion.SelectedIndex;
+            lbl_costoTipo_habitacion.Text = c_logica.MtdPrecioPorDia(posicion).ToString();
+
+        }
 
         private void cbx_tipo_habitacion_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            CostoTipoHabitacion();
         }
 
         private void txt_estado_SelectedIndexChanged(object sender, EventArgs e)

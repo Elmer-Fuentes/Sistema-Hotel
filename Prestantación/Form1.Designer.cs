@@ -30,7 +30,7 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lbl_costoTipo_habitacion = new System.Windows.Forms.Label();
             this.lbl_precio_total_dias = new System.Windows.Forms.Label();
             this.lbl_precio_dia = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -61,7 +61,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.lbl_costoTipo_habitacion);
             this.groupBox1.Controls.Add(this.lbl_precio_total_dias);
             this.groupBox1.Controls.Add(this.lbl_precio_dia);
             this.groupBox1.Controls.Add(this.label8);
@@ -98,16 +98,16 @@
             this.label9.TabIndex = 30;
             this.label9.Text = "Estado";
             // 
-            // label10
+            // lbl_costoTipo_habitacion
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(506, 78);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(52, 17);
-            this.label10.TabIndex = 29;
-            this.label10.Text = "Estado";
+            this.lbl_costoTipo_habitacion.AutoSize = true;
+            this.lbl_costoTipo_habitacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_costoTipo_habitacion.Location = new System.Drawing.Point(506, 78);
+            this.lbl_costoTipo_habitacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_costoTipo_habitacion.Name = "lbl_costoTipo_habitacion";
+            this.lbl_costoTipo_habitacion.Size = new System.Drawing.Size(40, 17);
+            this.lbl_costoTipo_habitacion.TabIndex = 29;
+            this.lbl_costoTipo_habitacion.Text = "- - - -";
             // 
             // lbl_precio_total_dias
             // 
@@ -428,7 +428,7 @@
         private FontAwesome.Sharp.IconButton btnEliminar;
         private System.Windows.Forms.DataGridView dgvDatosPlanilla;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lbl_costoTipo_habitacion;
         private System.Windows.Forms.Label lbl_precio_total_dias;
         private System.Windows.Forms.Label lbl_precio_dia;
         private System.Windows.Forms.Label label8;
