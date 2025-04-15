@@ -125,6 +125,26 @@ namespace Prestantación
             }
         }
 
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        public void LimpiarCancelar()
+        {
+            txt_codigoReservacion.Text = "";
+            txt_dias.Text = "";
+            cbx_size_habitac.Text = "";
+            cbx_tipo_habitacion.Text = "";
+            lbl_precio_dia.Text = "";
+            lbl_precio_total_dias.Text = "";
+            lbl_costoTipo_habitacion.Text = "";
+            lbl_total_factura.Text = "";
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            LimpiarCancelar();
+        }
     }
 }

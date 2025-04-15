@@ -41,7 +41,7 @@
             this.btnEditar = new FontAwesome.Sharp.IconButton();
             this.btnGuardar = new FontAwesome.Sharp.IconButton();
             this.txt_dias = new System.Windows.Forms.TextBox();
-            this.txt_codigoCliente = new System.Windows.Forms.TextBox();
+            this.txt_codigoReservacion = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -72,7 +72,7 @@
             this.groupBox1.Controls.Add(this.btnEditar);
             this.groupBox1.Controls.Add(this.btnGuardar);
             this.groupBox1.Controls.Add(this.txt_dias);
-            this.groupBox1.Controls.Add(this.txt_codigoCliente);
+            this.groupBox1.Controls.Add(this.txt_codigoReservacion);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
@@ -195,6 +195,7 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnEditar
             // 
@@ -225,6 +226,7 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // txt_dias
             // 
@@ -234,13 +236,13 @@
             this.txt_dias.TabIndex = 15;
             this.txt_dias.TextChanged += new System.EventHandler(this.txt_dias_TextChanged);
             // 
-            // txt_codigoCliente
+            // txt_codigoReservacion
             // 
-            this.txt_codigoCliente.Enabled = false;
-            this.txt_codigoCliente.Location = new System.Drawing.Point(161, 12);
-            this.txt_codigoCliente.Name = "txt_codigoCliente";
-            this.txt_codigoCliente.Size = new System.Drawing.Size(120, 20);
-            this.txt_codigoCliente.TabIndex = 14;
+            this.txt_codigoReservacion.Enabled = false;
+            this.txt_codigoReservacion.Location = new System.Drawing.Point(161, 12);
+            this.txt_codigoReservacion.Name = "txt_codigoReservacion";
+            this.txt_codigoReservacion.Size = new System.Drawing.Size(120, 20);
+            this.txt_codigoReservacion.TabIndex = 14;
             // 
             // label7
             // 
@@ -417,7 +419,7 @@
         private FontAwesome.Sharp.IconButton btnEditar;
         private FontAwesome.Sharp.IconButton btnGuardar;
         private System.Windows.Forms.TextBox txt_dias;
-        private System.Windows.Forms.TextBox txt_codigoCliente;
+        private System.Windows.Forms.TextBox txt_codigoReservacion;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
