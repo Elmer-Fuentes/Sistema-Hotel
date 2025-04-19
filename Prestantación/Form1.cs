@@ -22,6 +22,7 @@ namespace Prestantación
 
         private void frm_hotel_Load(object sender, EventArgs e)
         {
+           
             fechas();
             MtdPrecioTotalDias();
             MtdTotalFacturar();
