@@ -5,7 +5,7 @@ Este proyecto es un sistema de gestión de reservaciones de habitaciones desarro
 Sharp en visual studio 2022.
 SQL Server 2022.
 
-# Funcionalidades Principales de 
+## Funcionalidades Principales de 
   1. Fecha Actual: Recupera la fecha del día mediante el método MtdFechaHoy.
   2. Días a Hospedarse: Permite al usuario ingresar el número de días a hospedarse.
   3. Tamaño de Habitación: Muestra opciones en un combobox (Individual, Compartida, Suite, Presidencial).
@@ -16,18 +16,18 @@ SQL Server 2022.
   8. Total a Facturar: Calcula el total a facturar mediante el método MtdTotalFacturar.
   9. DataGridView: Muestra los detalles de la reservación (Código de Reservación, Días a Hospedarse, Tamaño de Habitación, Tipo de Habitación, Precio por Día, Precio Total Días, Costo Tipo Habitación, Total a Facturar, Fecha).
 
-# Base de Datos SQL Server
+## Base de Datos SQL Server
   1. Creación de la Base de Datos: Implementada en SQL Server.
   2. Tabla de Gestión de Datos: Creación de la tabla para almacenar los datos de las reservaciones.
   3. Métodos Implementados
   4. Scripts SQL: Incluye todos los scripts creados para la base de datos y la tabla de gestión de datos.
 
-# Botones
+## Botones
 1. Agregar: Permite agregar registros en la base de datos. No se permiten valores nulos, blancos o vacíos. Implementa try-catch para mensajes de confirmación y error.
 2. Editar: Permite actualizar registros seleccionados en la base de datos. No se permiten valores nulos, blancos o vacíos. Implementa try-catch para mensajes de confirmación y error.
 4. Eliminar: Permite eliminar registros seleccionados en la base de datos. Muestra error si no hay fila seleccionada. Implementa try-catch para mensajes de confirmación y error.
 5. Cancelar: Limpia todos los campos del formulario.
 6. Salir: Permite salir del sistema.
 
-# Extras
+## Extras
 1. se estara implementando la parte de reporteria para extraer la información en formatos de .xlsx, .doc, .pdf desde la interfaz 
