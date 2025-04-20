@@ -164,7 +164,7 @@
             this.cbx_tipo_habitacion.Location = new System.Drawing.Point(162, 109);
             this.cbx_tipo_habitacion.Name = "cbx_tipo_habitacion";
             this.cbx_tipo_habitacion.Size = new System.Drawing.Size(119, 21);
-            this.cbx_tipo_habitacion.TabIndex = 24;
+            this.cbx_tipo_habitacion.TabIndex = 17;
             this.cbx_tipo_habitacion.SelectedIndexChanged += new System.EventHandler(this.cbx_tipo_habitacion_SelectedIndexChanged);
             // 
             // cbx_size_habitac
@@ -178,7 +178,7 @@
             this.cbx_size_habitac.Location = new System.Drawing.Point(161, 78);
             this.cbx_size_habitac.Name = "cbx_size_habitac";
             this.cbx_size_habitac.Size = new System.Drawing.Size(119, 21);
-            this.cbx_size_habitac.TabIndex = 23;
+            this.cbx_size_habitac.TabIndex = 16;
             this.cbx_size_habitac.SelectedIndexChanged += new System.EventHandler(this.txt_estado_SelectedIndexChanged);
             // 
             // btnCancelar
@@ -191,7 +191,7 @@
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(84, 31);
-            this.btnCancelar.TabIndex = 22;
+            this.btnCancelar.TabIndex = 20;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -207,7 +207,7 @@
             this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(84, 31);
-            this.btnEditar.TabIndex = 21;
+            this.btnEditar.TabIndex = 19;
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -223,7 +223,7 @@
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(84, 31);
-            this.btnGuardar.TabIndex = 20;
+            this.btnGuardar.TabIndex = 18;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -321,7 +321,7 @@
             this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(84, 31);
-            this.btnSalir.TabIndex = 26;
+            this.btnSalir.TabIndex = 22;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -337,7 +337,7 @@
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(84, 31);
-            this.btnEliminar.TabIndex = 25;
+            this.btnEliminar.TabIndex = 23;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminar.UseVisualStyleBackColor = true;
