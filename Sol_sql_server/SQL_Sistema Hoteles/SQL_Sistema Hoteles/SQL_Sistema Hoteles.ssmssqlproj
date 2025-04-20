@@ -34,17 +34,29 @@
           <AssociatedConnUserName />
           <FullPath>Create table .sql</FullPath>
         </FileNode>
+        <FileNode Name="Create view hotel.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:FUENTES-ELMER:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>FUENTES-ELMER</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Create view hotel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="delete tbl_hotel.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:FUENTES-ELMER:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>FUENTES-ELMER</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>delete tbl_hotel.sql</FullPath>
+        </FileNode>
         <FileNode Name="Inser tbtl_hotel.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:FUENTES-ELMER:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>FUENTES-ELMER</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Inser tbtl_hotel.sql</FullPath>
         </FileNode>
-        <FileNode Name="SQLQuery1.sql">
+        <FileNode Name="Update tbl_hotel.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:FUENTES-ELMER:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>FUENTES-ELMER</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>SQLQuery1.sql</FullPath>
+          <FullPath>Update tbl_hotel.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>
