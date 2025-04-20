@@ -16,7 +16,7 @@ namespace Prestantación
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_hotel());
+            Application.Run(new MDIParent1());
         }
     }
 }

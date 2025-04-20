@@ -30,6 +30,13 @@ namespace Prestantación
             MtdTotalFacturar();
             TipoHabitacion();
             CostoTipoHabitacion();
+            stilo_borde();
+        }
+
+        public void stilo_borde()
+        {
+            this.ControlBox = false; // Oculta los botones de la barra de título
+            this.FormBorderStyle = FormBorderStyle.None; // Quita los bordes
         }
         public void fechas ()
         {

@@ -404,6 +404,7 @@
             this.Controls.Add(this.dgvDatosHoteles);
             this.Controls.Add(this.groupBox1);
             this.Name = "frm_hotel";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frm_hotel_Load);
             this.groupBox1.ResumeLayout(false);
