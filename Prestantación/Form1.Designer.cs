@@ -50,12 +50,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
-            this.dgvDatosPlanilla = new System.Windows.Forms.DataGridView();
+            this.dgvDatosHoteles = new System.Windows.Forms.DataGridView();
             this.label13 = new System.Windows.Forms.Label();
             this.lbl_fecha = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDatosPlanilla)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDatosHoteles)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -341,19 +341,19 @@
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminar.UseVisualStyleBackColor = true;
             // 
-            // dgvDatosPlanilla
+            // dgvDatosHoteles
             // 
-            this.dgvDatosPlanilla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvDatosPlanilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDatosPlanilla.Location = new System.Drawing.Point(41, 188);
-            this.dgvDatosPlanilla.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvDatosPlanilla.Name = "dgvDatosPlanilla";
-            this.dgvDatosPlanilla.ReadOnly = true;
-            this.dgvDatosPlanilla.RowHeadersWidth = 51;
-            this.dgvDatosPlanilla.RowTemplate.Height = 24;
-            this.dgvDatosPlanilla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDatosPlanilla.Size = new System.Drawing.Size(776, 196);
-            this.dgvDatosPlanilla.TabIndex = 24;
+            this.dgvDatosHoteles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvDatosHoteles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDatosHoteles.Location = new System.Drawing.Point(41, 188);
+            this.dgvDatosHoteles.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvDatosHoteles.Name = "dgvDatosHoteles";
+            this.dgvDatosHoteles.ReadOnly = true;
+            this.dgvDatosHoteles.RowHeadersWidth = 51;
+            this.dgvDatosHoteles.RowTemplate.Height = 24;
+            this.dgvDatosHoteles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDatosHoteles.Size = new System.Drawing.Size(776, 196);
+            this.dgvDatosHoteles.TabIndex = 24;
             // 
             // label13
             // 
@@ -398,14 +398,14 @@
             this.Controls.Add(this.label13);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.dgvDatosPlanilla);
+            this.Controls.Add(this.dgvDatosHoteles);
             this.Controls.Add(this.groupBox1);
             this.Name = "frm_hotel";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frm_hotel_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDatosPlanilla)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDatosHoteles)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -428,7 +428,7 @@
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconButton btnSalir;
         private FontAwesome.Sharp.IconButton btnEliminar;
-        private System.Windows.Forms.DataGridView dgvDatosPlanilla;
+        private System.Windows.Forms.DataGridView dgvDatosHoteles;
         private System.Windows.Forms.Label lbl_total_factura;
         private System.Windows.Forms.Label lbl_costoTipo_habitacion;
         private System.Windows.Forms.Label lbl_precio_total_dias;

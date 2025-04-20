@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using Logica;
+using Datos;
 
 namespace Prestantación
 {
@@ -19,10 +20,11 @@ namespace Prestantación
             InitializeComponent();
         }
         c_logica ob_c_logica = new c_logica();
+        Cd_hotel ob_cd_hotel = new Cd_hotel(); //instancia de toda la clase
 
         private void frm_hotel_Load(object sender, EventArgs e)
         {
-           
+            MostrarDataHotel();// query de la vista.
             fechas();
             MtdPrecioTotalDias();
             MtdTotalFacturar();
@@ -147,5 +149,12 @@ namespace Prestantación
         {
             LimpiarCancelar();
         }
+
+        #region = "Comunicación del metodo capa datos esta es el query de la vista 😊";
+        public void MostrarDataHotel() //cargar en load para que muestre la información
+        {
+            dgvDatosHoteles.DataSource = ob_cd_hotel.MtdConsultarClientes();
+        }
+        #endregion 
     }
 }
