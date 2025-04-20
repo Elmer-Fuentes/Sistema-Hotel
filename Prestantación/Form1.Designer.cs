@@ -354,6 +354,7 @@
             this.dgvDatosHoteles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDatosHoteles.Size = new System.Drawing.Size(776, 196);
             this.dgvDatosHoteles.TabIndex = 24;
+            this.dgvDatosHoteles.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatosHoteles_CellClick);
             // 
             // label13
             // 

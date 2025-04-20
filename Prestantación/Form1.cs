@@ -128,9 +128,41 @@ namespace Prestantación
             }
         }
 
+        #region = "Agregar Usuario parte 2";
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            // Validación correcta del texto ingresado
+            if (string.IsNullOrWhiteSpace(txt_dias.Text))
+            {
+                txt_dias.Text = ""; // Si está vacío o contiene solo espacios
+                MessageBox.Show("Ingrese el número de días porfavor no se permiten datos null", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                double dias_hospedaje = double.Parse(txt_dias.Text);
+                string tamano_habitacion = cbx_size_habitac.Text;
+                string tipo_habitacion = cbx_tipo_habitacion.Text;
+                double precio_dia = double.Parse(lbl_precio_dia.Text);
+                double precio_total_dia = double.Parse(lbl_precio_total_dias.Text);
+                double costo_tipo_habitacion = double.Parse(lbl_costoTipo_habitacion.Text);
+                double total_factura = double.Parse(lbl_total_factura.Text);
+                DateTime Fecha_factura = ob_c_logica.MtdFechaHoy();
+                Boolean estado_codigo = true;
+            
+            try
+            {
+                ob_cd_hotel.MtdAgregarData_Hotel(dias_hospedaje,tamano_habitacion,tipo_habitacion,precio_dia,precio_total_dia,costo_tipo_habitacion,total_factura,Fecha_factura,estado_codigo);
+                MessageBox.Show("Registro guardado correctamente","Guardado",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MostrarDataHotel();
+                LimpiarCancelar();
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            }
+            #endregion
         }
 
         public void LimpiarCancelar()
@@ -153,8 +185,26 @@ namespace Prestantación
         #region = "Comunicación del metodo capa datos esta es el query de la vista 😊";
         public void MostrarDataHotel() //cargar en load para que muestre la información
         {
-            dgvDatosHoteles.DataSource = ob_cd_hotel.MtdConsultarClientes();
+            dgvDatosHoteles.DataSource = ob_cd_hotel.MtdConsultarHotel();
         }
-        #endregion 
+
+        #endregion
+
+        #region = "retonar los datos de dtv los cbox, txt y label desde el evento CELLCLICK"
+        private void dgvDatosHoteles_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            txt_codigoReservacion.Text = dgvDatosHoteles.SelectedCells[0].Value.ToString();
+            txt_dias.Text = dgvDatosHoteles.SelectedCells[1].Value.ToString();
+            cbx_size_habitac.Text = dgvDatosHoteles.SelectedCells[2].Value.ToString();
+            cbx_tipo_habitacion.Text = dgvDatosHoteles.SelectedCells[3].Value.ToString();
+            lbl_precio_dia.Text = dgvDatosHoteles.SelectedCells[4].Value.ToString();
+            lbl_precio_total_dias.Text = dgvDatosHoteles.SelectedCells[5].Value.ToString();
+            lbl_costoTipo_habitacion.Text = dgvDatosHoteles.SelectedCells[6].Value.ToString();
+            lbl_total_factura.Text = dgvDatosHoteles.SelectedCells[7].Value.ToString();
+        }
+
+        #endregion
+
     }
 }

@@ -8,9 +8,9 @@ namespace Logica
 {
     public class c_logica
     {
-        public string MtdFechaHoy()
+        public DateTime MtdFechaHoy()
         {
-            return DateTime.Now.ToString("d");
+            return DateTime.Now;//.ToString("d");
         }
 
 
