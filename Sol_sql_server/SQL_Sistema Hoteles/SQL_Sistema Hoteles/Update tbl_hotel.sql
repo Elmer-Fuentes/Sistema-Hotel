@@ -11,3 +11,14 @@ update tbl_hotel set dias_hospedaje = 1,
 					estado_codigo = '1'
 					where codigo_reservacion = 3
 					
+
+
+
+
+/*##########################################
+query para actualizar registro desde csharp
+###########################################*/
+
+update tbl_hotel set dias_hospedaje = @dias_hospedaje,tamano_habitacion = @tamano_habitacion ,tipo_habitacion = @tipo_habitacion ,Precio_dia = @Precio_dia ,precio_total_dia= @precio_total_dia,costo_tipo_habitacion = @costo_tipo_habitacion ,total_a_facturar = @total_a_facturar ,fecha = @fecha,estado_codigo = @estado_codigo where codigo_reservacion = @codigo_reservacion
+					
+

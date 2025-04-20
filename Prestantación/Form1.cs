@@ -152,7 +152,7 @@ namespace Prestantación
             try
             {
                 ob_cd_hotel.MtdAgregarData_Hotel(dias_hospedaje,tamano_habitacion,tipo_habitacion,precio_dia,precio_total_dia,costo_tipo_habitacion,total_factura,Fecha_factura,estado_codigo);
-                MessageBox.Show("Registro guardado correctamente","Guardado",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Registro guardado correctamente","Status",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 MostrarDataHotel();
                 LimpiarCancelar();
 
@@ -162,8 +162,9 @@ namespace Prestantación
                 MessageBox.Show(ex.Message);
             }
             }
-            #endregion
+          
         }
+        #endregion
 
         public void LimpiarCancelar()
         {
@@ -206,5 +207,42 @@ namespace Prestantación
 
         #endregion
 
+        #region = "Boton Editar"
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            // Validación correcta del texto ingresado
+            if (string.IsNullOrWhiteSpace(txt_dias.Text))
+            {
+                txt_dias.Text = ""; // Si está vacío o contiene solo espacios
+                MessageBox.Show("Ingrese el número de días porfavor no se permiten datos null", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                int codigo_reservacion = int.Parse(txt_codigoReservacion.Text);
+                double dias_hospedaje = double.Parse(txt_dias.Text);
+                string tamano_habitacion = cbx_size_habitac.Text;
+                string tipo_habitacion = cbx_tipo_habitacion.Text;
+                double precio_dia = double.Parse(lbl_precio_dia.Text);
+                double precio_total_dia = double.Parse(lbl_precio_total_dias.Text);
+                double costo_tipo_habitacion = double.Parse(lbl_costoTipo_habitacion.Text);
+                double total_factura = double.Parse(lbl_total_factura.Text);
+                DateTime Fecha_factura = ob_c_logica.MtdFechaHoy();
+                Boolean estado_codigo = true;
+
+                try
+                {
+                    ob_cd_hotel.MtdActualizar_Data_Hotel(codigo_reservacion, dias_hospedaje, tamano_habitacion, tipo_habitacion, precio_dia, precio_total_dia, costo_tipo_habitacion, total_factura, Fecha_factura, estado_codigo);
+                    MessageBox.Show("Registro actualizaro correctamente", "Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MostrarDataHotel();
+                    LimpiarCancelar();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+        #endregion
     }
 }

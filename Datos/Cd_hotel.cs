@@ -32,7 +32,6 @@ namespace Datos
             Conexion cd_conexionDB = new Conexion(); //instancia de la clases Conexion
             string query = "insert into tbl_hotel (dias_hospedaje, tamano_habitacion, tipo_habitacion, Precio_dia, precio_total_dia, costo_tipo_habitacion, total_a_facturar, fecha,estado_codigo) values (@dias_hospedaje, @tamano_habitacion, @tipo_habitacion, @Precio_dia, @precio_total_dia, @costo_tipo_habitacion, @total_a_facturar, @fecha,@estado_codigo)";
             SqlCommand cmd = new SqlCommand(query, cd_conexionDB.MtdAbrirConexion());
-            //cmd.Parameters.AddWithValue("@CodigoCliente", Codigo); propiedad identity dbo.
             cmd.Parameters.AddWithValue("@dias_hospedaje", dias_hospedaje);
             cmd.Parameters.AddWithValue("@tamano_habitacion", tamano_habitacion);
             cmd.Parameters.AddWithValue("@tipo_habitacion", tipo_habitacion);
@@ -46,6 +45,34 @@ namespace Datos
             cd_conexionDB.MtdCerrarConexion();
         }
         #endregion
+
+
+        #region = "Actualizar data a Hotel"
+        public void MtdActualizar_Data_Hotel(int codigo_reservacion,double dias_hospedaje, string tamano_habitacion, string tipo_habitacion, double precio_dia, double precio_total_dia, double costo_tipo_habitacion, double total_factura, DateTime Fecha_factura, Boolean estado_codigo)
+        {
+            Conexion cd_conexionDB = new Conexion(); //instancia de la clases Conexion
+            string query = "update tbl_hotel set dias_hospedaje = @dias_hospedaje,tamano_habitacion = @tamano_habitacion ,tipo_habitacion = @tipo_habitacion ,Precio_dia = @Precio_dia ,precio_total_dia= @precio_total_dia,costo_tipo_habitacion = @costo_tipo_habitacion ,total_a_facturar = @total_a_facturar ,fecha = @fecha,estado_codigo = @estado_codigo where codigo_reservacion = @codigo_reservacion";
+            SqlCommand cmd = new SqlCommand(query, cd_conexionDB.MtdAbrirConexion());
+            cmd.Parameters.AddWithValue("@dias_hospedaje", dias_hospedaje);
+            cmd.Parameters.AddWithValue("@tamano_habitacion", tamano_habitacion);
+            cmd.Parameters.AddWithValue("@tipo_habitacion", tipo_habitacion);
+            cmd.Parameters.AddWithValue("@Precio_dia", precio_dia);
+            cmd.Parameters.AddWithValue("@precio_total_dia", precio_total_dia);
+            cmd.Parameters.AddWithValue("@costo_tipo_habitacion", costo_tipo_habitacion);
+            cmd.Parameters.AddWithValue("@total_a_facturar", total_factura);
+            cmd.Parameters.AddWithValue("@fecha", Fecha_factura);
+            cmd.Parameters.AddWithValue("@estado_codigo", estado_codigo);
+            cmd.Parameters.AddWithValue("@codigo_reservacion", codigo_reservacion);
+            cmd.ExecuteNonQuery();
+            cd_conexionDB.MtdCerrarConexion();
+        }
+        #endregion
+
+
+
+
+
+
 
 
 
