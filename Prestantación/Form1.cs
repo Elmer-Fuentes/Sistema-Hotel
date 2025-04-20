@@ -244,5 +244,28 @@ namespace Prestantación
             }
         }
         #endregion
+
+        #region = "Boton Eliminar"
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+                int codigo_reservacion = int.Parse(txt_codigoReservacion.Text);
+                Boolean estado_codigo = false;
+
+                try
+                {
+                    ob_cd_hotel.MtdDelete_Data_Hotel(codigo_reservacion, estado_codigo);
+                    MessageBox.Show("Registro Eliminado correctamente", "Status Eliminado (Desactivado 👍)", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MostrarDataHotel();
+                    LimpiarCancelar();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            
+        }
+        #endregion
     }
 }

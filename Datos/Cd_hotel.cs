@@ -68,6 +68,19 @@ namespace Datos
         }
         #endregion
 
+        #region = "Borrar (desactivar) data a Hotel"
+        public void MtdDelete_Data_Hotel(int codigo_reservacion,Boolean estado_codigo)
+        {
+            Conexion cd_conexionDB = new Conexion(); //instancia de la clases Conexion
+            string query = "update tbl_hotel set estado_codigo = @estado_codigo where codigo_reservacion = @codigo_reservacion";//opte desactivar los registros para mantener su integridad comentarios en query de sql
+            SqlCommand cmd = new SqlCommand(query, cd_conexionDB.MtdAbrirConexion());
+            cmd.Parameters.AddWithValue("@estado_codigo", estado_codigo);
+            cmd.Parameters.AddWithValue("@codigo_reservacion", codigo_reservacion);
+            cmd.ExecuteNonQuery();
+            cd_conexionDB.MtdCerrarConexion();
+        }
+        #endregion
+
 
 
 
