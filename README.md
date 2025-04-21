@@ -1,8 +1,8 @@
 # Sistema de Gestión de Reservaciones de Habitaciones
 Este proyecto es un sistema de gestión de reservaciones de habitaciones desarrollado en C# con SQL Server como base de datos. El sistema permite a los usuarios realizar, editar y eliminar reservaciones, así como calcular costos y generar facturas. A continuación, se detallan las funcionalidades y métodos implementados:
 
-##Tecnologias Utilizadas
-Sharp en visual studio 2022.
+## Tecnologias Utilizadas
+Csharp en visual studio 2022.
 SQL Server 2022.
 
 ## Funcionalidades Principales de 
@@ -30,4 +30,4 @@ SQL Server 2022.
 6. Salir: Permite salir del sistema.
 
 ## Extras
-1. se estara implementando la parte de reporteria para extraer la información en formatos de .xlsx, .doc, .pdf desde la interfaz 
+1. Se estara implementando la parte de reporteria para extraer la información en formatos de .xlsx, .doc, .pdf desde la interfaz 
